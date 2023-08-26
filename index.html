@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+
+    <!-- Linking bootstrap and js files -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<!-- add google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Preahvihear&display=swap" rel="stylesheet">
+
+<body>
+
+    <!-- Creating navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-light " style="background-color: #c7e4f9;">
+        <a href="index.html" class="navbar-brand"><img src="Music.jpg"
+                style="width: 45px; border-radius: 50%; height: 45px;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myid">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="myid" class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a href="#foot" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="#Album" class="nav-link">Albums</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Catagory</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="hindi.html">Hindi</a>
+                        <a class="dropdown-item" href="bengali.html">Bengali</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Attaching carousel -->
+    <div id="demo" class=" carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <li data-bs-target="#demo" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#demo" data-bs-slide-to="1"></li>
+            <li data-bs-target="#demo" data-bs-slide-to="2"></li>
+            <li data-bs-target="#demo" data-bs-slide-to="3"></li>
+            <li data-bs-target="#demo" data-bs-slide-to="4"></li>
+            <li data-bs-target="#demo" data-bs-slide-to="5"></li>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Artist/Arijit.jpg" style="width:100%; height: 500px;">
+            </div>
+
+            <div class="carousel-item">
+                <img src="Artist/Armaan.jpg" style="width: 100%; height: 500px;">
+            </div>
+            <div class="carousel-item">
+                <img src="Artist/Shreya.jpg" style="width: 100%; height: 500px;">
+            </div>
+            <div class="carousel-item">
+                <img src="Artist/Honey.jpg" style="width: 100%; height: 500px;">
+            </div>
+            <div class="carousel-item">
+                <img src="Artist/jubin.jpg" style="width: 100%; height: 500px;">
+            </div>
+            <div class="carousel-item">
+                <img src="Artist/ishan.jpg" style="width: 100%; height: 500px;">
+            </div>
+            <a href="#demo" class="carousel-control-prev" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+
+            <a href="#demo" class="carousel-control-next" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+
+    <!-- adding sad,love.... song catagories using cards -->
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6 py-2" style="font-size: xx-large;">
+                <b class="head">Listen to your favourite songs on a single platform</b>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-5 py-2">
+                <div class="card">
+                    <img src="Artist/sad.png" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Sad Songs</h3>
+                        <p class="card-text py-1"><button onclick="sad()"
+                                class="btn btn-outline-primary">Listen</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 py-2">
+                <div class="card">
+                    <img src="Artist/romantic.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Romantic Songs</h4>
+                        <p class="card-text py-1"><button onclick="romantic()"
+                                class="btn btn-outline-primary">Listen</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-5 py-2">
+                <div class="card">
+                    <img src="Artist/party.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Party Songs</h4>
+                        <p class="card-text py-1"><button onclick="party()"
+                                class="btn btn-outline-primary">Listen</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 py-2">
+                <div class="card">
+                    <img src="Artist/90s.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Old Songs</h4>
+                        <p class="card-text py-1"><button onclick="old_90()"
+                                class="btn btn-outline-primary">Listen</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Creating albums -->
+    <div id="Album" class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6 py-2" style="font-size: xx-large;">
+                <b class="head">Listen to Every song of your favourite movie</b>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-5 py-2">
+                <div class="card" id="demo1">
+                    <img src="Montu pilot/Montu.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Montu Pilot</h3>
+                        <p class="card-text py-1">
+                            <button onclick="montu()" class="btn btn-outline-primary">View</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 py-1">
+                <div class="card" id="demo2">
+                    <img src="Mohabbatein/mohabbatein.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Mohabbatein</h4>
+                        <p class="card-text py-1">
+                            <button onclick="mohabbatein()" class="btn btn-outline-primary">View</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-5 py-2">
+                <div class="card" id="demo3">
+                    <img src="Taqdeer/taqdeer.webp" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Taqdeer</h4>
+                        <p class="card-text py-1"><button onclick="taqdeer()"
+                                class="btn btn-outline-primary">View</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div id="flex1" class="col-3"><button onclick="album()" class="btn btn-outline-info">View All</button></div>
+        </div>
+    </div>
+    <div id="foot" class="foot">
+        <footer>
+            <div class="row py-3">
+                <div class="col-4"></div>
+                <div class="col-6"> &copy;2023 Pritam Kundu </div>
+            </div>
+            <div class="row py-2">
+                <div class="col-3"></div>
+                <div class="col-2"><a href="https://www.facebook.com/profile.php?id=100034281213509&mibextid=ZbWKwL"
+                        target="_main"><img src="footer/fb.png" style="width: 50px; height: 50px;"></a></div>
+                <div class="col-2"><a href="https://github.com/pritam071102" target="_main"><img src="footer/git.png"
+                            style="width: 50px; height: 50px;"></a></div>
+                <div class="col-2"><a href="https://twitter.com/i/flow/login?redirect_after_login=%2Flogin%3Flang%3Den"
+                        target="_main"><img src="footer/twitter.jpg"
+                            style="width: 50px; height: 50px; border-radius: 50%;"></a></div>
+            </div>
+            <div class="row py-3">
+                <div class="col-4"></div>
+                <div class="col-2"><a href="https://instagram.com/pritam_kundu0711?igshid=ZDc4ODBmNjlmNQ=="
+                        target="_main"><img src="footer/insta.jpg"
+                            style="width: 50px; height: 50px; border-radius: 50%;"></a></div>
+                <div class="col-2"><a href="https://in.linkedin.com/" target="_main"><img src="footer/linkdin.jpg"
+                            style="width: 50px; height: 50px; border-radius: 50%;"></a></div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
