@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Songs</title>
+</head>
+<!-- add google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Preahvihear&display=swap" rel="stylesheet">
+
+<!-- linking bootstrap and js files -->
+<link rel="stylesheet" href="css/bootstrap.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- search bar logic -->
+<script>
+    function f() {
+        var input, filter, ul, li, a, i, text;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myul");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            text = a.textContent || a.innerText;
+            if (text.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "block";
+            }
+            else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+<body style="font-family: 'Preahvihear', sans-serif; overflow-x: hidden;">
+
+    <!-- Making breadcrumbs -->
+    <div class="row">
+        <div class="col">
+            <nav class="navbar navbar-expand-md navbar-light" style="background-color: #c7e4f9;">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Romantic Songs</li>
+                </ol>
+                <!-- <input class="my-1 mx-5" type="text" placeholder="Search here" value="search"> -->
+                <form class="form-inline">
+                    <input class="form-control-mr-sm-2 mx-3" type="text" placeholder="Search here" id="myInput"
+                        onkeyup="f()" style="padding: 5px;">
+                </form>
+            </nav>
+            <ul class="list-group" id="myul">
+                <li><a class="list-group-item list-group-item-action" href="yeishq2.html">Ye Ishq Ha Hain</a></li>
+                <li><a class="list-group-item list-group-item-action" href="teriyado2.html">Teri Yaado Mein</a></li>
+                <li><a class="list-group-item list-group-item-action" href="omeredil2.html">O Mere Dil Ka Chain</a></li>
+                <li><a class="list-group-item list-group-item-action" href="khali2.html">Khali Khali Dil Ko</a></li>
+                <li><a class="list-group-item list-group-item-action" href="sabtera2.html">Sab Tera</a></li>
+                <li><a class="list-group-item list-group-item-action" href="meresamne2.html">Mere Samnewali Khidki Mein</a></li>
+                <li><a class="list-group-item list-group-item-action" href="gulabi2.html">Gulabi Aankhen</a></li>
+                <li><a class="list-group-item list-group-item-action" href="aayho2.html">Aaye Ho Meri Zindegi Mein</a></li>
+                <li><a class="list-group-item list-group-item-action" href="merenaam2.html">Mere Naam Tu</a></li>
+                <li><a class="list-group-item list-group-item-action" href="are2.html">Are Are Are</a></li>
+                <li><a class="list-group-item list-group-item-action" href="wajah2.html">Wajah Tum Ho</a></li>
+            </ul>
+</body>
+</html>
